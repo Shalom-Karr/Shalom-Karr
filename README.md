@@ -66,3 +66,12 @@ I believe in building applications that solve real-world problems or enhance use
 *   Deeper integration of push notifications for user engagement.
 *   Exploring more advanced frontend frameworks or libraries if project complexity grows.
 *   Further enhancing security measures and data privacy.
+
+## Contact
+
+Feel free to reach out!
+
+*   **Email:** `shalomkarr@gmail.com`
+*   **GroupMe:** `[Your GroupMe Contact Info or Link]`
+*   **(Optional) GitHub:** `[Your GitHub Profile URL]`
+*   **(Optional) Portfolio/Website:** `[Your Portfolio URL]`
