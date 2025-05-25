@@ -1,16 +1,66 @@
-## Hi there 👋
+# Shalom Karr - Developer Profile
 
-<!--
-**Shalom-Karr/Shalom-Karr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+👋 Hello! I'm Shalom Karr, a developer focused on building practical and engaging web applications. I enjoy bringing ideas to life, from conceptualization through to deployment, with a keen interest in user experience and robust functionality.
 
-Here are some ideas to get you started:
+## Current Focus: Cleveland Marketplace  Cleveland GroupMe Image Bot
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I'm currently deep in development on the **Cleveland Marketplace**, a feature-rich platform designed to connect local buyers and sellers. This project showcases my ability to integrate various web technologies to create a comprehensive user experience.
+
+Simultaneously, I have developed and provide instructions for the **GroupMe Copilot Image Bot**, a handy tool for GroupMe users that enhances image sharing and interaction with AI. This involved creating a gated instruction page with user authentication to provide a secure and controlled setup experience for users.
+
+## Technical Interests & Skills
+
+Based on our recent work, I'm demonstrably working with and interested in:
+
+*   **Frontend Development:**
+    *   HTML5, CSS3 (including modern CSS like Flexbox, Grid, and custom properties/variables for theming)
+    *   Vanilla JavaScript (ES6+) for dynamic UIs, DOM manipulation, event handling, and complex application logic.
+    *   Progressive Web App (PWA) features: Manifest, Service Workers for basic offline capabilities and app shell caching.
+*   **Backend-as-a-Service (BaaS):**
+    *   **Supabase:**
+        *   Database (PostgreSQL) with table creation, RPC functions, and views.
+        *   Authentication (Email/Password, including user profile management and custom metadata).
+        *   Row Level Security (RLS) for data protection.
+        *   Storage for user-uploaded files (images, attachments).
+        *   Realtime subscriptions for live updates (listings, comments, messages).
+        *   Edge Functions (for admin-level operations like user invites and password resets).
+*   **Security & Access Control:**
+    *   Implementing user authentication flows (signup, login, logout, password reset).
+    *   User-configurable Two-Factor Authentication (2FA) for enhanced login security.
+    *   Site-wide access gates for initial user verification.
+    *   Role-based access control (e.g., superadmin privileges).
+    *   Utilizing Cloudflare Turnstile for bot protection on forms.
+*   **Third-Party Integrations & APIs:**
+    *   Google Analytics (GA4) for event tracking and page view analytics.
+    *   Amplitude for product analytics, including session replay.
+    *   (Implied by GroupMe Bot) Interacting with external APIs like GroupMe and potentially Google Apps Script for automation.
+*   **UI/UX Considerations:**
+    *   Modal dialogs for various user interactions.
+    *   Toast notifications for user feedback.
+    *   Responsive design for usability across devices.
+    *   Loading states and asynchronous operation handling.
+    *   Interactive elements like search, sort, and filtering.
+*   **Development Workflow & Best Practices:**
+    *   Structuring complex JavaScript applications.
+    *   Clear separation of concerns (e.g., UI updates, API calls, state management).
+    *   Debugging and iterative development.
+    *   Creating user-facing documentation and setup guides.
+
+## Projects
+
+*   **Cleveland Marketplace:** (As described above) A full-featured local marketplace application.
+    *   *Key Features:* User auth, 2FA, item posting/editing/browsing, search, commenting, direct messaging with attachments and reactions, admin panel for user and content management.
+*   **GroupMe Copilot Image Bot - Instruction Page:**
+    *   A gated content site providing setup instructions for a GroupMe bot.
+    *   *Key Features:* Supabase email/password authentication, Cloudflare Turnstile, dynamic content unlocking based on auth state.
+
+## Philosophy
+
+I believe in building applications that solve real-world problems or enhance user interactions. I'm attentive to detail and strive to create intuitive interfaces backed by solid, secure backend logic. I'm also keen on ensuring users have the information they need, as demonstrated by creating clear setup guides for my tools.
+
+## Future Interests (Speculative based on current tech)
+
+*   Expanding PWA capabilities (offline data storage, background sync for pending actions).
+*   Deeper integration of push notifications for user engagement.
+*   Exploring more advanced frontend frameworks or libraries if project complexity grows.
+*   Further enhancing security measures and data privacy.
