@@ -1,38 +1,98 @@
-<svg width="100%" height="auto" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="auto" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bubble {
-      fill: #f0f0f0; /* Light gray bubble */
+      fill: #e0e0e0; /* Light gray bubble */
       stroke: #cccccc;
-      stroke-width: 1;
-      rx: 10;
-      ry: 10;
+      stroke-width: 0.5;
+      rx: 15;
+      ry: 15;
+      opacity: 0;
+      transform: translateY(10px);
+      transform-origin: center bottom;
     }
     .text {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif; /* Professional font */
       font-size: 16px;
       fill: #333333;
-      text-anchor: middle;
+      text-anchor: start;
       dominant-baseline: central;
+      opacity: 0;
+      transform: translateY(10px);
     }
-    /* Simple animation, can be expanded for more complex effects */
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    .dot {
+    .typing-dot {
       fill: #888;
-      animation: bounce 1.5s infinite;
       opacity: 0;
     }
-    .dot-1 { animation-delay: 0s; }
-    .dot-2 { animation-delay: 0.2s; }
-    .dot-3 { animation-delay: 0.4s; }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0; }
+    /* Animation for messages to appear */
+    @keyframes fadeInSlideUp {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Animation for typing dots */
+    @keyframes bounceDot {
+      0%, 100% { transform: translateY(0); opacity: 0.5; }
       50% { transform: translateY(-5px); opacity: 1; }
     }
+    @keyframes fadeInThenBounce {
+      0% { opacity: 0; }
+      1% { opacity: 0.5; } /* Appear quickly */
+      20%, 80% { opacity: 1; } /* Stay opaque for a while */
+      100% { opacity: 0.5; } /* Fade slightly, ready to loop */
+    }
+
+    /* Message specific animations */
+    #msg1-group, #msg1-text { animation: fadeInSlideUp 0.5s ease-out 0.5s forwards; }
+    #msg2-group, #msg2-text { animation: fadeInSlideUp 0.5s ease-out 2.5s forwards; }
+    #msg3-group, #msg3-text { animation: fadeInSlideUp 0.5s ease-out 4.5s forwards; }
+    #msg4-group, #msg4-text { animation: fadeInSlideUp 0.5s ease-out 6.5s forwards; }
+    #msg5-group, #msg5-text { animation: fadeInSlideUp 0.5s ease-out 8.5s forwards; }
+    #msg6-group, #msg6-text { animation: fadeInSlideUp 0.5s ease-out 10.5s forwards; }
+
+    /* Typing dots animations */
+    #typing-dots { animation: fadeInSlideUp 0.5s ease-out 12.5s forwards; }
+    #dot1 { animation: bounceDot 1.5s infinite 13s forwards; }
+    #dot2 { animation: bounceDot 1.5s infinite 13.2s forwards; }
+    #dot3 { animation: bounceDot 1.5s infinite 13.4s forwards; }
+
   </style>
-  <rect x="10" y="10" width="180" height="40" class="bubble"/>
-  <text x="100" y="30" class="text">Hello there!</text>
+
+  <!-- Message 1 -->
+  <g id="msg1-group">
+    <rect x="20" y="20" width="160" height="30" class="bubble"/>
+    <text x="35" y="35" class="text" id="msg1-text">Hi, I'm Shalom Karr!</text>
+  </g>
+
+  <!-- Message 2 -->
+  <g id="msg2-group">
+    <rect x="20" y="65" width="220" height="30" class="bubble"/>
+    <text x="35" y="80" class="text" id="msg2-text">Full-Stack Web Developer</text>
+  </g>
+
+  <!-- Message 3 -->
+  <g id="msg3-group">
+    <rect x="20" y="110" width="260" height="30" class="bubble"/>
+    <text x="35" y="125" class="text" id="msg3-text">Building the Cleveland Marketplace</text>
+  </g>
+
+  <!-- Message 4 -->
+  <g id="msg4-group">
+    <rect x="20" y="155" width="230" height="30" class="bubble"/>
+    <text x="35" y="170" class="text" id="msg4-text">Expert in Supabase & Cloudflare</text>
+  </g>
+
+  <!-- Message 5 -->
+  <g id="msg5-group">
+    <rect x="20" y="200" width="200" height="30" class="bubble"/>
+    <text x="35" y="215" class="text" id="msg5-text">Freelance Email Marketing</text>
+  </g>
+
+  <!-- Typing Dots Indicator (appears after all messages, then loops) -->
+  <g id="typing-dots">
+    <rect x="20" y="245" width="60" height="30" class="bubble"/>
+    <circle cx="35" cy="260" r="3" class="typing-dot" id="dot1"/>
+    <circle cx="45" cy="260" r="3" class="typing-dot" id="dot2"/>
+    <circle cx="55" cy="260" r="3" class="typing-dot" id="dot3"/>
+  </g>
 </svg>
