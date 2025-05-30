@@ -1,354 +1,38 @@
-<svg width="550" height="410" viewBox="0 0 550 410" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="100%" height="auto" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bubble {
-      fill: #e9e9eb;
+      fill: #f0f0f0; /* Light gray bubble */
+      stroke: #cccccc;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
     }
-    a {
-      fill: #0079ff;
+    .text {
+      font-family: sans-serif;
+      font-size: 16px;
+      fill: #333333;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
-    text {
-      fill: #242424;
-      font-size: 18px;
-      font-family: 'Inter', sans-serif; /* Added sans-serif fallback */
-      letter-spacing: -0.02em;
+    /* Simple animation, can be expanded for more complex effects */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
     }
-    
-    .emoji {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-    }
-
-    /* Animation timing for each message */
-    .typing-1 {
+    .dot {
+      fill: #888;
+      animation: bounce 1.5s infinite;
       opacity: 0;
-      animation: fade-in-out 1.5s;
     }
-    .msg-1 {
-      animation: wait 1.7s, msg-1 0.2s 1.7s;
-    }
+    .dot-1 { animation-delay: 0s; }
+    .dot-2 { animation-delay: 0.2s; }
+    .dot-3 { animation-delay: 0.4s; }
 
-    .typing-2 {
-      opacity: 0;
-      animation: wait 2.5s, fade-in-out 1.5s 2.5s;
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); opacity: 0; }
+      50% { transform: translateY(-5px); opacity: 1; }
     }
-    .msg-2 {
-      animation: wait 4.2s, msg-2 0.2s 4.2s;
-    }
-
-    .typing-3 {
-      opacity: 0;
-      animation: wait 5.5s, fade-in-out 1.5s 5.5s;
-    }
-    .msg-3 {
-      animation: wait 7.2s, msg-3 0.2s 7.2s;
-    }
-
-    .typing-4 {
-      opacity: 0;
-      animation: wait 8.5s, fade-in-out 1.5s 8.5s;
-    }
-    .msg-4 {
-      animation: wait 10.2s, msg-4 0.2s 10.2s;
-    }
-
-    .typing-5 {
-      opacity: 0;
-      animation: wait 11.5s, fade-in-out 1.5s 11.5s;
-    }
-    .msg-5 {
-      animation: wait 13.2s, msg-5 0.2s 13.2s;
-    }
-
-    .typing-6 {
-      opacity: 0;
-      animation: wait 14.5s, fade-in-out 1.5s 14.5s;
-    }    
-    .msg-6 {
-      animation: wait 16.2s, msg-6 0.2s 16.2s;
-    }    
-    
-    .typing-7 {
-      opacity: 0;
-      animation: wait 17.5s, fade-in-out 1.5s 17.5s;
-    }
-    .msg-7 {
-      animation: wait 19.2s, msg-7 0.2s 19.2s;
-    }    
-    
-    /* Common wait and fade animations */
-    @keyframes wait {
-      0%,
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes fade-in-out {
-      0%,
-      100% {
-        opacity: 0;
-      }
-      25%,
-      90% {
-        opacity: 1;
-      }
-    }
-
-    /* Individual message slide-in animations */
-    @keyframes msg-1 {
-      0% {
-        opacity: 0;
-        transform: translate(10px, 5px);
-      }
-      100% {
-        opacity: 1;
-        transform: translate(10px, 0);
-      }
-    }
-
-    @keyframes msg-2 {
-      0% {
-        opacity: 0;
-        transform: translate(10px, 53px);
-      }
-      100% {
-        opacity: 1;
-        transform: translate(10px, 48px);
-      }
-    }
-
-    @keyframes msg-3 {
-      0% {
-        opacity: 0;
-        transform: translate(10px, 125px);
-      }
-      100% {
-        opacity: 1;
-        transform: translate(10px, 120px);
-      }
-    }
-
-    @keyframes msg-4 {
-      0% {
-        opacity: 0;
-        transform: translate(10px, 173px); /* 168 + 5 */
-      }
-      100% {
-        opacity: 1;
-        transform: translate(10px, 168px);
-      }
-    }
-
-    @keyframes msg-5 {
-      0% {
-        opacity: 0;
-        transform: translate(10px, 245px); /* 240 + 5 */
-      }
-      100% {
-        opacity: 1;
-        transform: translate(10px, 240px);
-      }
-    }
-
-    @keyframes msg-6 {
-      0% {
-        opacity: 0;
-        transform: translate(10px, 317px); /* 312 + 5 */
-      }
-      100% {
-        opacity: 1;
-        transform: translate(10px, 312px);
-      }
-    }    
-    
-    @keyframes msg-7 {
-      0% {
-        opacity: 0;
-        transform: translate(10px, 365px); /* 360 + 5 */
-      }
-      100% {
-        opacity: 1;
-        transform: translate(10px, 360px);
-      }
-    }    
-    
-    /* Dark mode support */
-    @media (prefers-color-scheme: dark) {
-      .bubble {
-        fill: #3b3b3d;
-      }
-      text {
-        fill: #dcdcdc;
-      }
-      a {
-        fill: #0c82f9;
-      }
-    }
-
   </style>
-  
-  <!-- typing 1 -->
-  <g transform="translate(10, 0)" class="typing-1">
-    <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
-    <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
-    <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
-
-    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-
-  </g>
-
-  <!-- Message 1: Hi, I'm Shalom Karr -->
-  <g transform="translate(10, 0)" class="msg-1">
-    <rect width="210" height="42" rx="18.0355" class="bubble" />
-    <text x="15" y="27">Hi, I'm Shalom Karr 👋</text>
-  </g>
-
-  <!-- typing 2 -->
-  <g transform="translate(10, 48)" class="typing-2">
-    <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
-    <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
-    <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
-
-    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Message 2: I build practical & engaging web apps. -->
-  <g transform="translate(10, 48)" class="msg-2">
-    <rect width="360" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="27">I build practical & engaging web apps.</text>
-    <text x="15" y="50">Focused on UX & robust functionality.</text>
-  </g>
-
-  <!-- typing 3 -->
-  <g transform="translate(10, 120)" class="typing-3">
-    <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
-    <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
-    <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
-
-    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Message 3: Currently building Cleveland Marketplace... -->
-  <g transform="translate(10, 120)" class="msg-3">
-    <rect width="450" height="42" rx="18.0355" class="bubble" />
-    <text x="15" y="27">Currently building Cleveland Marketplace & GroupMe Bot</text>
-  </g>
-
-  <!-- typing 4 -->
-  <g transform="translate(10, 168)" class="typing-4">
-    <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
-    <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
-    <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
-
-    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Message 4: Skills include HTML, CSS, JS, Supabase (PostgreSQL, Auth, RLS)... -->
-  <g transform="translate(10, 168)" class="msg-4">
-    <rect width="420" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="27">Skills: HTML, CSS, JS, Supabase (PostgreSQL, Auth, RLS), </text>
-    <text x="15" y="50">Cloudflare Turnstile, Google Analytics, Amplitude.</text>
-  </g>
-
-  <!-- typing 5 -->
-  <g transform="translate(10, 240)" class="typing-5">
-    <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
-    <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
-    <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
-
-    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Message 5: My philosophy: build real-world solutions... -->
-  <g transform="translate(10, 240)" class="msg-5">
-    <rect width="420" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="27">My philosophy: build real-world solutions,</text>
-    <text x="15" y="50">intuitive interfaces, & secure backends.</text>
-  </g>
-
-  <!-- typing 6 -->
-  <g transform="translate(10, 312)" class="typing-6">
-    <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
-    <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
-    <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
-
-    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Message 6: Always learning, always building. -->
-  <g transform="translate(10, 312)" class="msg-6">
-    <rect width="320" height="42" rx="18.0355" class="bubble" />
-    <text x="15" y="27">Always learning, always building.</text>
-  </g>
-
-  <!-- typing 7 -->
-  <g transform="translate(10, 360)" class="typing-7">
-    <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
-    <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
-    <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
-
-    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Message 7: Check out my repos for more! -->
-  <g transform="translate(10, 360)" class="msg-7">
-    <rect width="320" height="42" rx="18.0355" class="bubble" />
-    <text x="15" y="27">Check out my repos for more!</text>
-  </g>
-
+  <rect x="10" y="10" width="180" height="40" class="bubble"/>
+  <text x="100" y="30" class="text">Hello there!</text>
 </svg>
