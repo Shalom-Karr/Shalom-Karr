@@ -96,10 +96,7 @@ I believe in building applications that solve real-world problems or enhance use
 </p>
 
 <p dir="auto">
-  <!-- GitHub Streak Stats -->
-  <a href="https://git.io/streak-stats" rel="noopener noreferrer nofollow">
-    <img src="https://streak-stats.demolab.com/?user=Shalom-karr&theme=monokai-metallian&hide_border=true" alt="GitHub Streak" style="max-width: 100%;">
-  </a>
+ [![GitHub Streak](https://streak-stats.demolab.com?user=Shalom-Karr)](https://git.io/streak-stats)
 </p>
 
 ---
