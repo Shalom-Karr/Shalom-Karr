@@ -96,7 +96,7 @@ I believe in building applications that solve real-world problems or enhance use
 </p>
 
 <p dir="auto">
- [![GitHub Streak](https://streak-stats.demolab.com?user=Shalom-Karr)](https://git.io/streak-stats)
+<img src="https://streak-stats.demolab.com?user=Shalom-Karr" alt="GitHub Streak" />
 </p>
 
 ---
