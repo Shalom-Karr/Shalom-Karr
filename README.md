@@ -1,7 +1,11 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=3b82f6&height=200&section=header&text=Shalom%20Karr&fontSize=70&fontColor=ffffff&animation=fadeIn" width="100%"/>
+  <h1>Hi, I'm Shalom Karr <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
   
-  <h3>Full-Stack Software Engineer & Digital Infrastructure Specialist</h3>
+  <a href="https://shalomkarr.pages.dev/">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=700&size=28&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Digital+Infrastructure+Specialist;Full-Stack+Software+Engineer;JavaScript+%26+Python+Expert;Automation+Architect" alt="Typing SVG" />
+  </a>
+  
+  <br/>
   
   <p>
     <a href="https://shalomkarr.pages.dev/">🌍 View My Portfolio</a> &nbsp;•&nbsp; 
