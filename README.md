@@ -55,9 +55,16 @@ Whether I am building a clinical intake portal or a serverless proxy network, my
   <img src="https://img.shields.io/badge/OAuth_2.0-323330?style=for-the-badge&logo=auth0&logoColor=white" />
   <img src="https://img.shields.io/badge/GroupMe-00AFF0?style=for-the-badge&logo=groupme&logoColor=white" />
 </div>
+<br/>
+<div align="center">
+  <img src="https://img.shields.io/badge/REST_APIs-005571?style=for-the-badge&logo=json&logoColor=white" />
+  <img src="https://img.shields.io/badge/SMTP_Integration-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  <img src="https://img.shields.io/badge/E--Commerce-95BF47?style=for-the-badge&logo=shopify&logoColor=white" />
+  <img src="https://img.shields.io/badge/Web_Security-RLS-005571?style=for-the-badge&logo=security&logoColor=white" />
+  <img src="https://img.shields.io/badge/UI/UX-FF4154?style=for-the-badge&logo=figma&logoColor=white" />
+</div>
 
 ---
-
 ## 🚀 Featured Engineering Work
 
 | Project | Description | Tech Stack |
