@@ -51,7 +51,7 @@ Whether I am building a clinical intake portal or a serverless proxy network, my
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Featured Engineering Work
 
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
