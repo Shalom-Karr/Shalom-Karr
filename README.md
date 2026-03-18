@@ -104,7 +104,7 @@ I believe in building applications that solve real-world problems or enhance use
 <div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto">About Me</h2></div>
 
 <p dir="auto">
-👋 I'm Shalom Karr, an 18-year-old full-stack web developer passionate about creating digital experiences that are both powerful and user-friendly. My expertise spans frontend and backend technologies, including HTML, CSS, JavaScript, and Supabase, enabling me to build scalable and secure applications.
+👋 I'm Shalom Karr, a 19-year-old full-stack web developer passionate about creating digital experiences that are both powerful and user-friendly. My expertise spans frontend and backend technologies, including HTML, CSS, JavaScript, and Supabase, enabling me to build scalable and secure applications.
 </p>
 <p dir="auto">
 Alongside my software development pursuits, I also handle billing and administrative operations for an ABA therapy company. Additionally, I undertake freelance email marketing design projects, creating weekly campaigns for various clients. These roles enhance my organizational, communication, and design strategy capabilities.
