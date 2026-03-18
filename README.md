@@ -56,8 +56,11 @@ Whether I am building a clinical intake portal or a serverless proxy network, my
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
 | 🍽️ **[Dinner Done](https://github.com/Shalom-Karr/dinner-done)** | A complete serverless e-commerce platform for a local catering company featuring Google OAuth, custom SMTP emails, and automated invoice generation. | `Supabase`, `JS`, `GCP`, `Apps Script` |
+| 🔓 **[RevealOS](https://unfilter.kosherandroid.com/)** | A sophisticated hardware-interfacing web utility that modifies system-level partitions on restricted Android devices leveraging WebUSB and ADB protocols. | `WebUSB`, `Android`, `Vanilla JS` |
+| 🌉 **[New Bridges ABA](#)** | A custom serverless intake platform replacing legacy WordPress. Engineered with a distinct soft UI and custom analytics for high-conversion patient onboarding. | `Tailwind`, `Alpine.js`, `Supabase` |
+| 📰 **[The Hock Cleveland](https://thehockcleveland.netlify.app/)** | A high-performance community engagement platform featuring weekly newsletters, real-time WhatsApp alerts, and advanced GSAP animations. | `GSAP`, `Tailwind`, `Netlify` |
 | 🕍 **[Khal Yereim Platform](https://github.com/Shalom-Karr/khalyereim)** | Digital home for an Orthodox Synagogue featuring deeply integrated halachic calculations (Zmanim) and a custom WYSIWYG printing engine. | `Vanilla JS`, `CSS`, `KosherZmanim` |
-| 📰 **[SK News Network](https://github.com/Shalom-Karr/sknews)** | A highly optimized live news feed and SMS text alert network delivering real-time, kosher-filtered news to the Yeshiva community. | `Cloudflare`, `JS`, `Amplitude` |
+| 📱 **[SK News Network](https://github.com/Shalom-Karr/sknews)** | A highly optimized live news feed and SMS text alert network delivering real-time, kosher-filtered news to the Yeshiva community. | `Cloudflare`, `JS`, `Amplitude` |
 | 🩺 **[Every Child ABA](https://github.com/Shalom-Karr/Darabaner-ABA-Website)** | A blazing-fast, single-page application built for an Autism therapy clinic focusing on local SEO (JSON-LD) and absolute performance (zero-framework). | `Tailwind`, `HTML5`, `Schema.org` |
 | ✂️ **[Visual PDF Editor](https://github.com/Shalom-Karr/pdf-combiner)** | A HIPAA-ready, 100% client-side Progressive Web App (PWA) for secure drag-and-drop PDF merging, splitting, and signing in the browser. | `PDF-lib`, `Sortable.js`, `PWA` |
 
