@@ -1,3 +1,4 @@
+<img src="logo.png">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=3b82f6&height=200&section=header&text=Shalom%20Karr&fontSize=70&fontColor=ffffff&animation=fadeIn" width="100%"/>
 <div align="center">
   <h1>Hi, I'm Shalom Karr <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
