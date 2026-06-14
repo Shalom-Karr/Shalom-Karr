@@ -100,5 +100,6 @@ Whether I am building a clinical intake portal or a serverless proxy network, my
   <i>"I genuinely thrive on the analytical challenges inherent in software development. Driven by a love for problem-solving and innovation, I strive not just to meet user needs but to anticipate them."</i>
 </div>
 
+---
 
 ![GitHubCard](https://githubcard.com/g/zpXqHayA.svg)
