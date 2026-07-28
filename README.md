@@ -117,6 +117,33 @@ Whether the answer is a Ruby Discourse plugin, a Go Windows binary, a Supabase r
 
 ---
 
+## 🎵 Spotlight — SK Music
+
+<div align="center">
+  <h3><a href="https://skmusic.shalomkarr.workers.dev/">skmusic.shalomkarr.workers.dev</a></h3>
+  <p><i>A fast, kosher, filtered YouTube music client — search and stream a whitelisted catalog, filtered by construction.</i></p>
+  <p>
+    <a href="https://github.com/Shalom-Karr/SK-Music"><img src="https://img.shields.io/github/stars/Shalom-Karr/SK-Music?style=for-the-badge&logo=github&labelColor=1e293b&color=3b82f6" /></a>
+    <a href="https://github.com/Shalom-Karr/SK-Music/forks"><img src="https://img.shields.io/github/forks/Shalom-Karr/SK-Music?style=for-the-badge&logo=github&labelColor=1e293b&color=3b82f6" /></a>
+    <img src="https://img.shields.io/github/license/Shalom-Karr/SK-Music?style=for-the-badge&labelColor=1e293b&color=3b82f6" />
+    <img src="https://img.shields.io/badge/PWA-installable-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white" />
+  </p>
+</div>
+
+Most music apps solve filtering with a blocklist and hope. SK Music inverts it — **every song comes from a pre-approved artist, so the catalog is accurate by construction** rather than by moderation. The interesting part is what that let me delete.
+
+- 🔍 **No search backend.** The catalog is compressed and baked into the deploy at build time. Every query runs in a **Web Worker on your machine** — there is no search API to call, rate-limit, or pay for.
+- 🔤 **Hebrew-aware fuzzy matching.** The hard problem is that users type romanized English for titles stored in Hebrew. Both sides get reduced to a **consonant skeleton**, so *"Mimkomcha"* finds ממקומך regardless of which vowels anyone guessed.
+- ⚡ **Static-first.** `dist/` holds the entire SPA, search engine, baked catalog and assets on **Cloudflare Workers Static Assets**. The Worker itself stays thin — live playlists, trending, and anonymous analytics only.
+- 📴 **Installable PWA** with service-worker caching, backed by **Supabase** for analytics and parental controls.
+- ▶️ Plays through the official **YouTube IFrame Player API** — nothing is hosted or re-encoded. Catalog originates from the [Zemer](https://github.com/ZemerTeam/zemer-app) project by [@alltechdev](https://github.com/alltechdev). GPL-3.0, non-commercial, shipped by GitHub Actions on push to `main`.
+
+<div align="right">
+  <a href="https://shalomkarr.pages.dev/blog/post/building-sk-music-hebrew-search-static-workers"><b>📝 Read the writeup: Hebrew-Aware Search That Runs in Your Browser →</b></a>
+</div>
+
+---
+
 ## 🚀 Featured Engineering Work
 
 | Project | Description | Tech Stack |
@@ -124,7 +151,6 @@ Whether the answer is a Ruby Discourse plugin, a Go Windows binary, a Supabase r
 | 🛡️ **[lockguard](https://github.com/Shalom-Karr/lockguard)** | Kernel-mode Windows 11 lockdown. A BootStart driver enforces a WFP network filter, registry/process/file/object callbacks, and a WDAC allowlist; recovery is gated behind PBKDF2 at a million iterations. Written to resist a tech-savvy administrator, not merely inconvenience one. | `C (WDK)`, `Go`, `Win32` |
 | 🔒 **[kiosk-exit-guard](https://github.com/Shalom-Karr/kiosk-exit-guard)** | A 7.9 MB single executable that turns a Windows machine into a locked kiosk — WebView2 window, low-level keyboard hook with password-gated re-injection, HKLM bcrypt password store, default-deny outbound firewall, SHA-256-verified atomic self-updater, and a Service supervisor. | `Go`, `Win32`, `WebView2` |
 | 💎 **[JtechTools](https://github.com/JTech-Forums/JtechTools)** | The Discourse plugin bundle powering [forums.jtechforums.org](https://forums.jtechforums.org/) — production Ruby in front of a real community of thousands. Ships dislikes, custom SMTP, mini-mod, mod-categories and dumbcourse as one install behind six admin tabs. | `Ruby`, `Discourse`, `Ember.js` |
-| 🎵 **[SK Music](https://skmusic.shalomkarr.workers.dev/)** | A kosher filtered music client with **no search backend** — the catalog is baked into the deploy and every query runs in a Web Worker, matching Hebrew titles against romanized English by reducing both to a consonant skeleton. | `Cloudflare Workers`, `PWA`, `Vanilla JS` |
 | 🧰 **[SK Tools](https://sk-tools.pages.dev/)** | A privacy-first browser toolbox — PDF editor, video/audio/image converters, VCF splitter, and a BYO-key Claude chat. Every byte is processed client-side; nothing is ever uploaded. | `WebAssembly`, `ffmpeg.wasm`, `pdf-lib` |
 | 🔓 **[RevealOS Unfilter](https://unfilter.kosherandroid.com/)** | A hardware-interfacing web utility that modifies system-level partitions on restricted Android devices straight from the browser over WebUSB and ADB — restoring functionality without compromising device integrity. | `WebUSB`, `ADB`, `Vanilla JS` |
 | ⬇️ **[SK Video Downloader](https://github.com/Shalom-Karr/SK-Video-Downloader)** | A Manifest V3 extension that detects videos on any page and saves them as seekable MP4s — remuxing MPEG-TS and fragmented-MP4 HLS locally with a **custom transmuxer**. No servers, no WASM, no re-encoding. | `JavaScript`, `MV3`, `HLS` |
